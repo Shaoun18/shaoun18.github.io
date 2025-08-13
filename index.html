@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Shaoun | Portfolio</title>
+    <title>Shaoun | Software Engineer | ML Enthusiast</title>
     <meta name="description" content="Personal portfolio of Shaoun – Full Stack Web Developer & ML Enthusiast" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,10 +21,12 @@
             --ring: #1f2937;
             --radius: 18px;
             --shadow: 0 10px 25px rgba(0, 0, 0, .25);
+            --transition-speed: 0.1s;
         }
 
         * {
-            box-sizing: border-box
+            box-sizing: border-box;
+            user-select: none;
         }
 
         html {
@@ -34,7 +36,11 @@
         body {
             margin: 0;
             font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-            background: radial-gradient(1200px 600px at 80% -10%, rgba(96, 165, 250, .12), transparent 60%), radial-gradient(900px 500px at 10% -10%, rgba(167, 139, 250, .12), transparent 55%), var(--bg);
+            background: radial-gradient(1200px 600px at 80% -10%,
+                    rgba(96, 165, 250, .12), transparent 60%),
+                radial-gradient(900px 500px at 10% -10%,
+                    rgba(167, 139, 250, .12),
+                    transparent 55%), var(--bg);
             color: var(--txt)
         }
 
@@ -101,7 +107,8 @@
         }
 
         .menu a:hover {
-            background: #111827
+            background: #111827;
+            color: #8995fa;
         }
 
         .btn {
@@ -120,6 +127,11 @@
             background: #0b0f17;
             color: #e5e7eb;
             border: 1px solid #1f2937
+        }
+
+        .btn:hover {
+            background: rgb(241, 243, 143);
+            color: #1045b9;
         }
 
         .hero {
@@ -153,6 +165,13 @@
             font-size: 12px
         }
 
+        .eyebrow:hover {
+            background-color: #8995fa;
+            color: black;
+            font-size: .9rem;
+            transition: color var(--transition-speed);
+        }
+
         h1 {
             font-size: clamp(28px, 5vw, 44px);
             margin: 14px 0 10px
@@ -175,6 +194,11 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
             margin-top: 22px
+        }
+
+        .hero .stats:hover {
+            color: rgb(236, 113, 41);
+            transition: var(--transition-speed);
         }
 
         .stat {
@@ -379,7 +403,7 @@
         <div class="container nav">
             <a class="brand" href="#top">
                 <div class="logo"><span>S</span></div>
-                <span>Shaoun</span>
+                <span>ProgrammerShaoun</span>
             </a>
             <nav class="menu">
                 <a href="#projects">Projects</a>
@@ -401,8 +425,8 @@
                 <p class="lead">I craft responsive UIs, REST APIs and data-driven features. I enjoy Laravel + Vue,
                     WordPress, and Python for ML experiments.</p>
                 <div class="cta">
-                    <a class="btn" href="#projects">View Projects</a>
-                    <a class="btn ghost" href="mailto:you@email.com">Email</a>
+                    <a class="btn" href="https://github.com/Shaoun18?tab=repositories">View Projects</a>
+                    <a class="btn ghost" href="mailto:shaoun@bitbirds.com">Email</a>
                 </div>
                 <div class="hero stats">
                     <div class="stat">
@@ -410,15 +434,16 @@
                         <div>Projects</div>
                     </div>
                     <div class="stat">
-                        <div class="n">5 yrs</div>
+                        <div class="n">1 yrs</div>
                         <div>Experience</div>
                     </div>
                     <div class="stat">
-                        <div class="n">10</div>
-                        <div>Certs</div>
+                        <div class="n">6</div>
+                        <div>Certificates</div>
                     </div>
                 </div>
             </div>
+            <!-- profile Picture  -->
             <div class="card mock">
                 <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
                 <img alt="Project preview"
@@ -430,7 +455,7 @@
         <section id="projects">
             <div class="section-head">
                 <h2>Featured projects</h2>
-                <a class="tag" href="https://github.com/">See all on GitHub →</a>
+                <a class="tag" href="https://github.com/Shaoun18?tab=repositories">See all on GitHub →</a>
             </div>
             <div class="grid projects">
                 <article class="card project">
@@ -445,7 +470,7 @@
                             payment.</p>
                         <div class="cta">
                             <a class="btn" href="#">Live</a>
-                            <a class="btn ghost" href="https://github.com/">Code</a>
+                            <a class="btn ghost" href="https://github.com/Shaoun18/Shopgrids-Ecommerce.git">Code</a>
                         </div>
                     </div>
                 </article>
@@ -461,7 +486,7 @@
                             storage.</p>
                         <div class="cta">
                             <a class="btn" href="#">Live</a>
-                            <a class="btn ghost" href="https://github.com/">Code</a>
+                            <a class="btn ghost" href="https://github.com/Shaoun18/Todo-Module_Wordpress.git">Code</a>
                         </div>
                     </div>
                 </article>
@@ -470,14 +495,15 @@
                         alt="Project" />
                     <div class="body">
                         <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
-                            <h3 style="margin:0">Time‑series ML</h3>
-                            <span class="tag">Python • Sklearn</span>
+                            <h3 style="margin:0">Browser Based ML Comparison</h3>
+                            <span class="tag">Python • TensorFlow</span>
                         </div>
-                        <p class="lead" style="font-size:14px">Forecasting experiments with tree‑based models and
-                            feature engineering.</p>
+                        <p class="lead" style="font-size:14px">Interactive browser-based tool to compare machine
+                            learning models in real time.
+                        </p>
                         <div class="cta">
                             <a class="btn" href="#">Live</a>
-                            <a class="btn ghost" href="https://github.com/">Code</a>
+                            <a class="btn ghost" href="https://github.com/Shaoun18/Browser-ML-Comparison.git">Code</a>
                         </div>
                     </div>
                 </article>
