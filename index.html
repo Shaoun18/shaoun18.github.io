@@ -132,21 +132,128 @@
         <!-- Skills Section -->
         <section id="skills">
             <div class="section-head">
-                <h2>Skills & tools</h2>
+                <h2>Technical Skills</h2>
             </div>
-            <div class="grid skill">
-                <div class="chip">HTML5</div>
-                <div class="chip">CSS3</div>
-                <div class="chip">JavaScript</div>
-                <div class="chip">PHP</div>
-                <div class="chip">Laravel</div>
-                <div class="chip">Vue</div>
-                <div class="chip">WordPress</div>
-                <div class="chip">MySQL</div>
-                <div class="chip">Python</div>
-                <div class="chip">Scikit‑learn</div>
-                <div class="chip">Git & GitHub</div>
-                <div class="chip">AWS</div>
+
+            <!-- Languages -->
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg"
+                            alt="JQuery">
+                        <span>JQuery</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+                        <span>PHP</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML">
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frameworks / Libraries -->
+            <div class="skill-category">
+                <h3>Frameworks / Libraries</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                            alt="Vue.js">
+                        <span>Vue.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            alt="React.js">
+                        <span>React.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js">
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+                            alt="Tailwind CSS">
+
+                        <span>Tailwind CSS</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                            alt="MySQL">
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Developer Tools -->
+            <div class="skill-category">
+                <h3>Developer Tools</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                            alt="GitHub" style="background: #d3d0d0;">
+                        <span>GitHub</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                            alt="Postman">
+                        <span>Postman</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
+                            alt="Jupyter">
+                        <span>Jupyter</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Machine Learning -->
+            <div class="skill-category">
+                <h3>Machine Learning Technologies</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+                            alt="PyTorch">
+                        <span>PyTorch</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                            alt="TensorFlow">
+                        <span>TensorFlow</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+                            alt="NumPy">
+                        <span>NumPy</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+                            alt="Pandas">
+                        <span>Pandas</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"
+                            alt="Scikit-learn">
+                        <span>Scikit-learn</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -179,21 +286,12 @@
                 <h2>Get in touch</h2>
             </div>
             <div class="card card-pad">
-
                 <form id="contactForm">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="example@gmail.com" required>
+                    <input type="text" name="from_name" placeholder="Your name" required>
+                    <input type="email" name="reply_to" placeholder="example@gmail.com" required>
                     <textarea name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
                     <button class="btn" type="submit">Send message</button>
                 </form>
-
-                <!-- <form
-                    onsubmit="event.preventDefault(); window.location='mailto:shaoun@bitbirds.com?subject=Project%20inquiry&body='+encodeURIComponent(document.getElementById('msg').value);">
-                    <input type="text" placeholder="Your name" required>
-                    <input type="email" placeholder="example@gmail.com" required>
-                    <textarea id="msg" rows="5" placeholder="Tell me about your project…" required></textarea>
-                    <button class="btn" type="submit">Send message</button>
-                </form> -->
             </div>
         </section>
 
@@ -201,7 +299,6 @@
 
     <footer>
         <div class="container foot">
-
             <div class="footer-column">
                 <h2>Let's Connect</h2>
                 <p>Interested in connecting for a discussion? Feel free to email me at <a class="send-email"
@@ -222,45 +319,52 @@
             </div>
 
             <div class="footer-bootom">© <span id="year"></span> ProgrammerShaoun. All rights reserved.</div>
-
         </div>
     </footer>
 
-    <!-- Toast -->
+    <!-- Toast (success message) -->
     <div id="toast" style="
-    position: fixed; bottom: 20px; right: 20px;
-    background: #10b981; color: white; padding: 12px 18px;
-    border-radius: 8px; display: none; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    ">Message sent successfully!</div>
+  position: fixed; bottom: 20px; right: 20px;
+  background: #10b981; color: white; padding: 12px 18px;
+  border-radius: 8px; display: none; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+">Message sent successfully!</div>
 
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const EMAILJS_PUBLIC_KEY = "P0SBhvT-Hf90cDARx";
+        const EMAILJS_SERVICE_ID = "service_kldllhc";
+        const EMAILJS_TEMPLATE_ID = "template_1pwzrtt";
+
+        // Correct init for v2
+        emailjs.init(EMAILJS_PUBLIC_KEY);
 
         const form = document.getElementById('contactForm');
         const toast = document.getElementById('toast');
+        document.getElementById('year').textContent = new Date().getFullYear();
 
         form.addEventListener('submit', function (e) {
             e.preventDefault();
 
-            const formData = new FormData(form);
+            const btn = form.querySelector('button[type="submit"]');
+            btn.disabled = true;
 
-            fetch("send_email.php", {
-                method: "POST",
-                body: formData
-            })
-                .then(response => response.text())
-                .then(data => {
-                    if (data.trim() === "OK") {
-                        form.reset();
-                        toast.style.display = 'block';
-                        setTimeout(() => toast.style.display = 'none', 3000);
-                    } else {
-                        alert("Error: " + data);
-                    }
+            emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, '#contactForm')
+                .then(() => {
+                    form.reset();
+                    toast.style.display = 'block';
+                    setTimeout(() => toast.style.display = 'none', 3000);
                 })
-                .catch(error => alert("Error sending message: " + error));
+                .catch((err) => {
+                    alert("Failed to send message: " + JSON.stringify(err));
+                })
+                .finally(() => {
+                    btn.disabled = false;
+                });
+
         });
     </script>
+
 </body>
 
 </html>
