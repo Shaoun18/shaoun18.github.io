@@ -122,6 +122,25 @@ header {
   color: #8995fa;
 }
 
+#menu-toggle {
+  display: none;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#close-menu {
+  display: none;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
 /* ------------------------------------
    Buttons
 ------------------------------------ */
@@ -534,6 +553,14 @@ footer {
 }
 
 @media (max-width: 560px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  #close-menu {
+    display: block;
+  }
+
   .menu {
     display: none;
   }
