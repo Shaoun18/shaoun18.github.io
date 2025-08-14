@@ -4,427 +4,43 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Shaoun | Software Engineer | ML Enthusiast</title>
+    <title>ProgrammerShaoun | Software Engineer | ML Enthusiast</title>
     <meta name="description" content="Personal portfolio of Shaoun – Full Stack Web Developer & ML Enthusiast" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <style>
-        :root {
-            --bg: #0b0f17;
-            --card: #111827;
-            --muted: #6b7280;
-            --txt: #e5e7eb;
-            --brand: #60a5fa;
-            --brand-2: #a78bfa;
-            --ring: #1f2937;
-            --radius: 18px;
-            --shadow: 0 10px 25px rgba(0, 0, 0, .25);
-            --transition-speed: 0.1s;
-            --btn-hover: rgb(241, 243, 143);
-        }
-
-        * {
-            box-sizing: border-box;
-            user-select: none;
-        }
-
-        html {
-            scroll-behavior: smooth
-        }
-
-        body {
-            margin: 0;
-            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-            background: radial-gradient(1200px 600px at 80% -10%,
-                    rgba(96, 165, 250, .12), transparent 60%),
-                radial-gradient(900px 500px at 10% -10%,
-                    rgba(167, 139, 250, .12),
-                    transparent 55%), var(--bg);
-            color: var(--txt)
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 28px
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            backdrop-filter: saturate(1.2) blur(10px);
-            background: linear-gradient(to bottom, rgba(11, 15, 23, .8), rgba(11, 15, 23, .4));
-            border-bottom: 1px solid #11182788
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            justify-content: space-between
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 800;
-            letter-spacing: .3px
-        }
-
-        .brand .logo {
-            width: 34px;
-            height: 34px;
-            border-radius: 10px;
-            background: linear-gradient(135deg, var(--brand), var(--brand-2));
-            display: grid;
-            place-items: center;
-            box-shadow: var(--shadow);
-        }
-
-        .brand .logo span {
-            font-size: 18px;
-            font-weight: 900;
-            color: #0b0f17
-        }
-
-        .menu {
-            display: flex;
-            gap: 18px
-        }
-
-        .menu a {
-            padding: 10px 14px;
-            border-radius: 12px;
-            color: #cbd5e1
-        }
-
-        .menu a:hover {
-            background: #111827;
-            color: #8995fa;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 16px;
-            border-radius: 14px;
-            background: linear-gradient(135deg, var(--brand), var(--brand-2));
-            color: #0b0f17;
-            font-weight: 700;
-            border: 0
-        }
-
-        .btn.ghost {
-            background: #0b0f17;
-            color: #e5e7eb;
-            border: 1px solid #1f2937
-        }
-
-        .btn:hover {
-            background: var(--btn-hover);
-            color: #1045b9;
-        }
-
-        .hero {
-            display: grid;
-            grid-template-columns: 1.2fr .8fr;
-            gap: 28px;
-            align-items: center;
-            padding: 36px 0
-        }
-
-        .card {
-            background: linear-gradient(180deg, #0e1421, #0b0f17);
-            border: 1px solid #1f2937;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow)
-        }
-
-        .hero .intro {
-            padding: 36px
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #0f172a;
-            border: 1px solid #1f2937;
-            color: #93c5fd;
-            padding: 6px 10px;
-            border-radius: 999px;
-            font-size: 12px
-        }
-
-        .eyebrow:hover {
-            background-color: #8995fa;
-            color: black;
-            font-size: .9rem;
-            transition: color var(--transition-speed);
-        }
-
-        h1 {
-            font-size: clamp(28px, 5vw, 44px);
-            margin: 14px 0 10px
-        }
-
-        .lead {
-            color: #cbd5e1;
-            line-height: 1.7
-        }
-
-        .cta {
-            display: flex;
-            gap: 12px;
-            margin-top: 16px;
-            flex-wrap: wrap
-        }
-
-        .hero .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-top: 22px
-        }
-
-        .hero .stats:hover {
-            color: rgb(236, 113, 41);
-            transition: var(--transition-speed);
-        }
-
-        .stat {
-            background: #0f172a;
-            border: 1px solid #1f2937;
-            border-radius: 14px;
-            padding: 16px;
-            text-align: center
-        }
-
-        .stat .n {
-            font-size: 22px;
-            font-weight: 800
-        }
-
-        .mock {
-            padding: 0;
-            overflow: hidden;
-            position: relative
-        }
-
-        .mock .bar {
-            display: flex;
-            gap: 6px;
-            background: #0f172a;
-            padding: 10px;
-            border-bottom: 1px solid #1f2937
-        }
-
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 999px;
-            background: #ef4444
-        }
-
-        .dot:nth-child(2) {
-            background: #f59e0b
-        }
-
-        .dot:nth-child(3) {
-            background: #10b981
-        }
-
-        .mock img {
-            display: block;
-            width: 100%;
-            height: auto;
-            filter: saturate(1.05) contrast(1.03)
-        }
-
-        section {
-            padding: 44px 0
-        }
-
-        .section-head {
-            display: flex;
-            align-items: end;
-            justify-content: space-between;
-            margin-bottom: 18px
-        }
-
-        .section-head h2 {
-            margin: 0;
-            font-size: 26px
-        }
-
-        .grid {
-            display: grid;
-            gap: 18px
-        }
-
-        .projects {
-            grid-template-columns: repeat(3, 1fr)
-        }
-
-        .project {
-            overflow: hidden
-        }
-
-        .project img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover
-        }
-
-        .project .body {
-            padding: 16px
-        }
-
-        .tag {
-            font-size: 12px;
-            color: #93c5fd;
-            border: 1px solid #1f2937;
-            background: #0f172a;
-            padding: 5px 8px;
-            border-radius: 999px
-        }
-
-        .skills {
-            grid-template-columns: repeat(6, 1fr)
-        }
-
-        .chip {
-            background: #0f172a;
-            border: 1px solid #1f2937;
-            border-radius: 999px;
-            padding: 10px 12px;
-            text-align: center
-        }
-
-        .chip:hover {
-            background: #8995fa;
-            color: var(--btn-hover);
-        }
-
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 18px
-        }
-
-        .card-pad {
-            padding: 24px
-        }
-
-        .contact form {
-            display: grid;
-            gap: 12px
-        }
-
-        input,
-        textarea {
-            background: #0f172a;
-            border: 1px solid #1f2937;
-            border-radius: 12px;
-            padding: 12px;
-            color: #e5e7eb
-        }
-
-        input:focus,
-        textarea:focus {
-            outline: 2px solid #334155
-        }
-
-        footer {
-            border-top: 1px solid #111827;
-            margin-top: 32px
-        }
-
-        .foot {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: #94a3b8;
-            font-size: 14px;
-            padding: 24px 0
-        }
-
-        .social {
-            display: flex;
-            gap: 10px
-        }
-
-        .social a {
-            background: #0f172a;
-            border: 1px solid #1f2937;
-            padding: 10px;
-            border-radius: 12px;
-            display: grid;
-            place-items: center
-        }
-
-        /* Responsive */
-        @media (max-width: 900px) {
-            .hero {
-                grid-template-columns: 1fr
-            }
-
-            .projects {
-                grid-template-columns: 1fr 1fr
-            }
-
-            .skills {
-                grid-template-columns: repeat(3, 1fr)
-            }
-
-            .about {
-                grid-template-columns: 1fr
-            }
-        }
-
-        @media (max-width: 560px) {
-            .menu {
-                display: none
-            }
-
-            .projects {
-                grid-template-columns: 1fr
-            }
-        }
-    </style>
 </head>
 
 <body>
     <header>
         <div class="container nav">
-            <a class="brand" href="#top">
+            <a class="brand" target="_blank" href="https://sites.google.com/view/programmershaoun">
                 <div class="logo"><span>S</span></div>
                 <span>ProgrammerShaoun</span>
             </a>
-            <nav class="menu">
+
+            <button id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav id="nav_menu" class="menu">
+                <button id="close-menu" aria-label="Close Menu">✖</button>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a href="#about_me">About</a>
+                <a href="#contacts">Contact</a>
             </nav>
-            <a class="btn" href="#contact">Hire me</a>
+            <a class="btn" href="#contacts">Hire me</a>
         </div>
     </header>
 
     <main id="top" class="container">
 
-        <!-- Hero -->
+        <!-- Hero Section -->
         <section class="hero">
             <div class="card intro">
                 <span class="eyebrow">Full Stack Dev • ML Enthusiast</span>
@@ -432,7 +48,7 @@
                 <p class="lead">I craft responsive UIs, REST APIs and data-driven features. I enjoy Laravel + Vue,
                     WordPress, and Python for ML experiments.</p>
                 <div class="cta">
-                    <a class="btn" href="https://github.com/Shaoun18?tab=repositories">View Projects</a>
+                    <a class="btn" target="_blank" href="https://github.com/Shaoun18?tab=repositories">View Projects</a>
                     <a class="btn ghost" href="mailto:shaoun@bitbirds.com">Email</a>
                 </div>
                 <div class="hero stats">
@@ -441,11 +57,11 @@
                         <div>Projects</div>
                     </div>
                     <div class="stat">
-                        <div class="n">1 yrs</div>
+                        <div class="n">1 yrs+</div>
                         <div>Experience</div>
                     </div>
                     <div class="stat">
-                        <div class="n">6</div>
+                        <div class="n">6+</div>
                         <div>Certificates</div>
                     </div>
                 </div>
@@ -453,21 +69,20 @@
             <!-- profile Picture  -->
             <div class="card mock">
                 <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-                <img alt="Project preview"
-                    src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop" />
+                <img alt="Project preview" src="https://avatars.githubusercontent.com/u/39999509?v=4" />
             </div>
         </section>
 
-        <!-- Projects -->
+        <!-- Projects Section -->
         <section id="projects">
             <div class="section-head">
                 <h2>Featured projects</h2>
-                <a class="tag" href="https://github.com/Shaoun18?tab=repositories">See all on GitHub →</a>
+                <a class="tag" target="_blank" href="https://github.com/Shaoun18?tab=repositories">See all on GitHub
+                    →</a>
             </div>
             <div class="grid projects">
                 <article class="card project">
-                    <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1400&auto=format&fit=crop"
-                        alt="Project" />
+                    <img src="shopgrids.png" alt="Project" />
                     <div class="body">
                         <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
                             <h3 style="margin:0">Shopgrids E‑commerce</h3>
@@ -476,8 +91,9 @@
                         <p class="lead" style="font-size:14px">Full‑stack e‑commerce with CRUD, auth, REST API and SSL
                             payment.</p>
                         <div class="cta">
-                            <a class="btn" href="#">Live</a>
-                            <a class="btn ghost" href="https://github.com/Shaoun18/Shopgrids-Ecommerce.git">Code</a>
+                            <a class="btn" target="_blank" href="#">Live</a>
+                            <a class="btn ghost" target="_blank"
+                                href="https://github.com/Shaoun18/Shopgrids-Ecommerce.git">Code</a>
                         </div>
                     </div>
                 </article>
@@ -492,8 +108,9 @@
                         <p class="lead" style="font-size:14px">Dashboard to‑do plugin with AJAX actions and MySQL
                             storage.</p>
                         <div class="cta">
-                            <a class="btn" href="#">Live</a>
-                            <a class="btn ghost" href="https://github.com/Shaoun18/Todo-Module_Wordpress.git">Code</a>
+                            <a class="btn" target="_blank" href="#">Live</a>
+                            <a class="btn ghost" target="_blank"
+                                href="https://github.com/Shaoun18/Todo-Module_Wordpress.git">Code</a>
                         </div>
                     </div>
                 </article>
@@ -509,45 +126,153 @@
                             learning models in real time.
                         </p>
                         <div class="cta">
-                            <a class="btn" href="#">Live</a>
-                            <a class="btn ghost" href="https://github.com/Shaoun18/Browser-ML-Comparison.git">Code</a>
+                            <a class="btn" target="_blank" href="#">Live</a>
+                            <a class="btn ghost" target="_blank"
+                                href="https://github.com/Shaoun18/Browser-ML-Comparison.git">Code</a>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- Skills -->
+        <!-- Skills Section -->
         <section id="skills">
             <div class="section-head">
-                <h2>Skills & tools</h2>
+                <h2>Technical Skills</h2>
             </div>
-            <div class="grid skills">
-                <div class="chip">HTML5</div>
-                <div class="chip">CSS3</div>
-                <div class="chip">JavaScript</div>
-                <div class="chip">PHP</div>
-                <div class="chip">Laravel</div>
-                <div class="chip">Vue</div>
-                <div class="chip">WordPress</div>
-                <div class="chip">MySQL</div>
-                <div class="chip">Python</div>
-                <div class="chip">Scikit‑learn</div>
-                <div class="chip">Git & GitHub</div>
-                <div class="chip">AWS</div>
+
+            <!-- Languages -->
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg"
+                            alt="JQuery">
+                        <span>JQuery</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+                        <span>PHP</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML">
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Frameworks / Libraries -->
+            <div class="skill-category">
+                <h3>Frameworks / Libraries</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                            alt="Vue.js">
+                        <span>Vue.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            alt="React.js">
+                        <span>React.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js">
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+                            alt="Tailwind CSS">
+
+                        <span>Tailwind CSS</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                            alt="MySQL">
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Developer Tools -->
+            <div class="skill-category">
+                <h3>Developer Tools</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                            alt="GitHub" style="background: #d3d0d0;">
+                        <span>GitHub</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+                            alt="Postman">
+                        <span>Postman</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
+                            alt="Jupyter">
+                        <span>Jupyter</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Machine Learning -->
+            <div class="skill-category">
+                <h3>Machine Learning Technologies</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+                            alt="PyTorch">
+                        <span>PyTorch</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                            alt="TensorFlow">
+                        <span>TensorFlow</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
+                            alt="NumPy">
+                        <span>NumPy</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+                            alt="Pandas">
+                        <span>Pandas</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"
+                            alt="Scikit-learn">
+                        <span>Scikit-learn</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- About -->
-        <section id="about" class="about">
+        <!-- About Section -->
+        <section id="about_me" class="about">
             <div class="card card-pad">
                 <h2>About me</h2>
                 <p class="lead">I’m a full‑stack developer from Bangladesh who loves building performant, accessible web
                     apps. When I’m not coding, I teach and tinker with ML.</p>
                 <ul>
-                    <li>✔ Focused on clean architecture</li>
-                    <li>✔ Communication & collaboration</li>
-                    <li>✔ Continuous learning</li>
+                    <li>Focused on clean architecture</li>
+                    <li>Communication & collaboration</li>
+                    <li>Continuous learning</li>
                 </ul>
             </div>
             <div class="card card-pad">
@@ -561,27 +286,18 @@
             </div>
         </section>
 
-        <!-- Contact -->
-        <section id="contact" class="contact">
+        <!-- Contact Section -->
+        <section id="contacts" class="contact">
             <div class="section-head">
                 <h2>Get in touch</h2>
             </div>
             <div class="card card-pad">
-
                 <form id="contactForm">
-                    <input type="text" name="name" placeholder="Your name" required>
-                    <input type="email" name="email" placeholder="example@gmail.com" required>
+                    <input type="text" name="from_name" placeholder="Your name" required>
+                    <input type="email" name="reply_to" placeholder="example@gmail.com" required>
                     <textarea name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
                     <button class="btn" type="submit">Send message</button>
                 </form>
-
-                <!-- <form
-                    onsubmit="event.preventDefault(); window.location='mailto:shaoun@bitbirds.com?subject=Project%20inquiry&body='+encodeURIComponent(document.getElementById('msg').value);">
-                    <input type="text" placeholder="Your name" required>
-                    <input type="email" placeholder="example@gmail.com" required>
-                    <textarea id="msg" rows="5" placeholder="Tell me about your project…" required></textarea>
-                    <button class="btn" type="submit">Send message</button>
-                </form> -->
             </div>
         </section>
 
@@ -589,50 +305,117 @@
 
     <footer>
         <div class="container foot">
-            <div>© <span id="year"></span> Shaoun. All rights reserved.</div>
-            <div class="social">
-                <a href="https://github.com/Shaoun18" aria-label="GitHub" title="GitHub">GH</a>
-                <a href="#" aria-label="Twitter" title="Twitter">TW</a>
-                <a href="#" aria-label="LinkedIn" title="LinkedIn">IN</a>
+            <div class="footer-column">
+                <h2>Let's Connect</h2>
+                <p>Interested in connecting for a discussion? Feel free to email me at <a class="send-email"
+                        href="mailto:cse.engrshaounchandrashill@tutanota.de">cse.engrshaounchandrashill@tutanota.de</a>
+                    or reach out through any of the social links below.</p>
             </div>
+
+            <div class="footer-column social">
+                <a href="https://github.com/Shaoun18" aria-label="GitHub" title="GitHub" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" aria-label="Twitter" title="Twitter" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" aria-label="LinkedIn" title="LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+            <div class="footer-bootom">© <span id="year"></span> ProgrammerShaoun. All rights reserved.</div>
         </div>
     </footer>
 
-    <!-- Toast -->
+    <!-- Toast (success message) -->
     <div id="toast" style="
-    position: fixed; bottom: 20px; right: 20px;
-    background: #10b981; color: white; padding: 12px 18px;
-    border-radius: 8px; display: none; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    ">Message sent successfully!</div>
+  position: fixed; bottom: 20px; right: 20px;
+  background: #10b981; color: white; padding: 12px 18px;
+  border-radius: 8px; display: none; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+">Message sent successfully!</div>
+
 
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.getElementById("menu-toggle");
+            const menu = document.getElementById("nav_menu");
+            const closeMenu = document.getElementById("close-menu");
+
+            menuToggle.addEventListener("click", () => {
+                menu.classList.toggle("open");
+                const isOpen = menu.classList.contains("open");
+                menuToggle.setAttribute("aria-expanded", isOpen);
+            });
+
+            closeMenu.addEventListener("click", () => {
+                menu.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+            });
+        });
+    </script>
+
+
+    <!-- Toggle Script -->
+    <!-- <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("nav_menu");
+        const closeMenu = document.getElementById("close-menu");
+
+        menuToggle.addEventListener("click", () => {
+            menu.classList.toggle("open");
+            const isOpen = menu.classList.contains("open");
+            menuToggle.setAttribute("aria-expanded", isOpen);
+        });
+
+
+        // menuToggle.addEventListener("click", () => {
+        //     menu.classList.add("open");
+        //     menuToggle.setAttribute("aria-expanded", "true");
+        // });
+
+        closeMenu.addEventListener("click", () => {
+            menu.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+        });
+    </script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
+
+        const EMAILJS_PUBLIC_KEY = "P0SBhvT-Hf90cDARx";
+        const EMAILJS_SERVICE_ID = "service_kldllhc";
+        const EMAILJS_TEMPLATE_ID = "template_1pwzrtt";
+
+        // Correct init for v2
+        emailjs.init(EMAILJS_PUBLIC_KEY);
 
         const form = document.getElementById('contactForm');
         const toast = document.getElementById('toast');
+        document.getElementById('year').textContent = new Date().getFullYear();
 
         form.addEventListener('submit', function (e) {
             e.preventDefault();
 
-            const formData = new FormData(form);
+            const btn = form.querySelector('button[type="submit"]');
+            btn.disabled = true;
 
-            fetch("send_email.php", {
-                method: "POST",
-                body: formData
-            })
-                .then(response => response.text())
-                .then(data => {
-                    if (data.trim() === "OK") {
-                        form.reset();
-                        toast.style.display = 'block';
-                        setTimeout(() => toast.style.display = 'none', 3000);
-                    } else {
-                        alert("Error: " + data);
-                    }
+            emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, '#contactForm')
+                .then(() => {
+                    form.reset();
+                    toast.style.display = 'block';
+                    setTimeout(() => toast.style.display = 'none', 3000);
                 })
-                .catch(error => alert("Error sending message: " + error));
+                .catch((err) => {
+                    alert("Failed to send message: " + JSON.stringify(err));
+                })
+                .finally(() => {
+                    btn.disabled = false;
+                });
+
         });
     </script>
+
 </body>
 
 </html>
