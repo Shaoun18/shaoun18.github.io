@@ -11,7 +11,7 @@
   --ring: #1f2937;
   --radius: 18px;
   --shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  --transition-speed: 0.1s;
+  --transition-speed: 0.8s;
   --btn-hover: rgb(241, 243, 143);
   --input-color: #0f172a;
 }
@@ -125,7 +125,6 @@ header {
 /* ------------------------------------
    Buttons
 ------------------------------------ */
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -152,13 +151,13 @@ header {
 /* ------------------------------------
    Sections
 ------------------------------------ */
-
 section {
   padding: 30px 0;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(75, 74, 69, 0);
-  transition: transform 0.5s ease, box-shadow 0.5s ease,
-    background-color 0.5s ease;
+  /* transition: transform 0.5s ease, box-shadow 0.5s ease,
+    background-color 0.5s ease; */
+  transition: var(--transition-speed);
   position: relative;
   overflow: hidden;
   margin-bottom: 2.5rem;
@@ -196,8 +195,18 @@ section {
   object-fit: cover;
 }
 
+.project img:hover {
+  transform: scale(1.1);
+  transition: var(--transition-speed);
+}
+
 .project .body {
   padding: 1rem;
+}
+
+.project .body:hover {
+  transform: translateY(-15px);
+  transition: var(--transition-speed);
 }
 
 .tag {
@@ -207,6 +216,12 @@ section {
   background: var(--input-color);
   padding: 5px 8px;
   border-radius: 999px;
+}
+
+.tag:hover {
+  background: #e9c70a;
+  color: blue;
+  transition: var(--transition-speed);
 }
 
 /* ==== Skills Section ===== */
@@ -306,14 +321,14 @@ textarea:focus {
   color: #93c5fd;
   padding: 6px 10px;
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .eyebrow:hover {
   background-color: #8995fa;
   color: black;
-  font-size: 0.9rem;
-  transition: color var(--transition-speed);
+  font-size: 0.8rem;
+  transition: var(--transition-speed);
 }
 
 h1 {
@@ -391,13 +406,14 @@ h1 {
 
 .mock img {
   display: block;
-  width: 100%;
+  width: 450px;
   height: auto;
   filter: saturate(1.05) contrast(1.03);
 }
 
 .mock img:hover {
   transform: scale(1.2);
+  transition: var(--transition-speed);
 }
 
 /* ------------------------------------
