@@ -4,427 +4,36 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Shaoun | Software Engineer | ML Enthusiast</title>
+    <title>ProgrammerShaoun | Software Engineer | ML Enthusiast</title>
     <meta name="description" content="Personal portfolio of Shaoun – Full Stack Web Developer & ML Enthusiast" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-        :root {
-            --bg: #0b0f17;
-            --card: #111827;
-            --muted: #6b7280;
-            --txt: #e5e7eb;
-            --brand: #60a5fa;
-            --brand-2: #a78bfa;
-            --ring: #1f2937;
-            --radius: 18px;
-            --shadow: 0 10px 25px rgba(0, 0, 0, .25);
-            --transition-speed: 0.1s;
-            --btn-hover: rgb(241, 243, 143);
-        }
-
-        * {
-            box-sizing: border-box;
-            user-select: none;
-        }
-
-        html {
-            scroll-behavior: smooth
-        }
-
-        body {
-            margin: 0;
-            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-            background: radial-gradient(1200px 600px at 80% -10%,
-                    rgba(96, 165, 250, .12), transparent 60%),
-                radial-gradient(900px 500px at 10% -10%,
-                    rgba(167, 139, 250, .12),
-                    transparent 55%), var(--bg);
-            color: var(--txt)
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 28px
-        }
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            backdrop-filter: saturate(1.2) blur(10px);
-            background: linear-gradient(to bottom, rgba(11, 15, 23, .8), rgba(11, 15, 23, .4));
-            border-bottom: 1px solid #11182788
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            justify-content: space-between
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 800;
-            letter-spacing: .3px
-        }
-
-        .brand .logo {
-            width: 34px;
-            height: 34px;
-            border-radius: 10px;
-            background: linear-gradient(135deg, var(--brand), var(--brand-2));
-            display: grid;
-            place-items: center;
-            box-shadow: var(--shadow);
-        }
-
-        .brand .logo span {
-            font-size: 18px;
-            font-weight: 900;
-            color: #0b0f17
-        }
-
-        .menu {
-            display: flex;
-            gap: 18px
-        }
-
-        .menu a {
-            padding: 10px 14px;
-            border-radius: 12px;
-            color: #cbd5e1
-        }
-
-        .menu a:hover {
-            background: #111827;
-            color: #8995fa;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 16px;
-            border-radius: 14px;
-            background: linear-gradient(135deg, var(--brand), var(--brand-2));
-            color: #0b0f17;
-            font-weight: 700;
-            border: 0
-        }
-
-        .btn.ghost {
-            background: #0b0f17;
-            color: #e5e7eb;
-            border: 1px solid #1f2937
-        }
-
-        .btn:hover {
-            background: var(--btn-hover);
-            color: #1045b9;
-        }
-
-        .hero {
-            display: grid;
-            grid-template-columns: 1.2fr .8fr;
-            gap: 28px;
-            align-items: center;
-            padding: 36px 0
-        }
-
-        .card {
-            background: linear-gradient(180deg, #0e1421, #0b0f17);
-            border: 1px solid #1f2937;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow)
-        }
-
-        .hero .intro {
-            padding: 36px
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #0f172a;
-            border: 1px solid #1f2937;
-            color: #93c5fd;
-            padding: 6px 10px;
-            border-radius: 999px;
-            font-size: 12px
-        }
-
-        .eyebrow:hover {
-            background-color: #8995fa;
-            color: black;
-            font-size: .9rem;
-            transition: color var(--transition-speed);
-        }
-
-        h1 {
-            font-size: clamp(28px, 5vw, 44px);
-            margin: 14px 0 10px
-        }
-
-        .lead {
-            color: #cbd5e1;
-            line-height: 1.7
-        }
-
-        .cta {
-            display: flex;
-            gap: 12px;
-            margin-top: 16px;
-            flex-wrap: wrap
-        }
-
-        .hero .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-top: 22px
-        }
-
-        .hero .stats:hover {
-            color: rgb(236, 113, 41);
-            transition: var(--transition-speed);
-        }
-
-        .stat {
-            background: #0f172a;
-            border: 1px solid #1f2937;
-            border-radius: 14px;
-            padding: 16px;
-            text-align: center
-        }
-
-        .stat .n {
-            font-size: 22px;
-            font-weight: 800
-        }
-
-        .mock {
-            padding: 0;
-            overflow: hidden;
-            position: relative
-        }
-
-        .mock .bar {
-            display: flex;
-            gap: 6px;
-            background: #0f172a;
-            padding: 10px;
-            border-bottom: 1px solid #1f2937
-        }
-
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 999px;
-            background: #ef4444
-        }
-
-        .dot:nth-child(2) {
-            background: #f59e0b
-        }
-
-        .dot:nth-child(3) {
-            background: #10b981
-        }
-
-        .mock img {
-            display: block;
-            width: 100%;
-            height: auto;
-            filter: saturate(1.05) contrast(1.03)
-        }
-
-        section {
-            padding: 44px 0
-        }
-
-        .section-head {
-            display: flex;
-            align-items: end;
-            justify-content: space-between;
-            margin-bottom: 18px
-        }
-
-        .section-head h2 {
-            margin: 0;
-            font-size: 26px
-        }
-
-        .grid {
-            display: grid;
-            gap: 18px
-        }
-
-        .projects {
-            grid-template-columns: repeat(3, 1fr)
-        }
-
-        .project {
-            overflow: hidden
-        }
-
-        .project img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover
-        }
-
-        .project .body {
-            padding: 16px
-        }
-
-        .tag {
-            font-size: 12px;
-            color: #93c5fd;
-            border: 1px solid #1f2937;
-            background: #0f172a;
-            padding: 5px 8px;
-            border-radius: 999px
-        }
-
-        .skills {
-            grid-template-columns: repeat(6, 1fr)
-        }
-
-        .chip {
-            background: #0f172a;
-            border: 1px solid #1f2937;
-            border-radius: 999px;
-            padding: 10px 12px;
-            text-align: center
-        }
-
-        .chip:hover {
-            background: #8995fa;
-            color: var(--btn-hover);
-        }
-
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 18px
-        }
-
-        .card-pad {
-            padding: 24px
-        }
-
-        .contact form {
-            display: grid;
-            gap: 12px
-        }
-
-        input,
-        textarea {
-            background: #0f172a;
-            border: 1px solid #1f2937;
-            border-radius: 12px;
-            padding: 12px;
-            color: #e5e7eb
-        }
-
-        input:focus,
-        textarea:focus {
-            outline: 2px solid #334155
-        }
-
-        footer {
-            border-top: 1px solid #111827;
-            margin-top: 32px
-        }
-
-        .foot {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: #94a3b8;
-            font-size: 14px;
-            padding: 24px 0
-        }
-
-        .social {
-            display: flex;
-            gap: 10px
-        }
-
-        .social a {
-            background: #0f172a;
-            border: 1px solid #1f2937;
-            padding: 10px;
-            border-radius: 12px;
-            display: grid;
-            place-items: center
-        }
-
-        /* Responsive */
-        @media (max-width: 900px) {
-            .hero {
-                grid-template-columns: 1fr
-            }
-
-            .projects {
-                grid-template-columns: 1fr 1fr
-            }
-
-            .skills {
-                grid-template-columns: repeat(3, 1fr)
-            }
-
-            .about {
-                grid-template-columns: 1fr
-            }
-        }
-
-        @media (max-width: 560px) {
-            .menu {
-                display: none
-            }
-
-            .projects {
-                grid-template-columns: 1fr
-            }
-        }
-    </style>
 </head>
 
 <body>
     <header>
         <div class="container nav">
-            <a class="brand" href="#top">
+            <a class="brand" target="_blank" href="https://sites.google.com/view/programmershaoun">
                 <div class="logo"><span>S</span></div>
                 <span>ProgrammerShaoun</span>
             </a>
             <nav class="menu">
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a href="#about_me">About</a>
+                <a href="#contacts">Contact</a>
             </nav>
-            <a class="btn" href="#contact">Hire me</a>
+            <a class="btn" href="#contacts">Hire me</a>
         </div>
     </header>
 
     <main id="top" class="container">
 
-        <!-- Hero -->
+        <!-- Hero Section -->
         <section class="hero">
             <div class="card intro">
                 <span class="eyebrow">Full Stack Dev • ML Enthusiast</span>
@@ -458,11 +67,11 @@
             </div>
         </section>
 
-        <!-- Projects -->
+        <!-- Projects Section -->
         <section id="projects">
             <div class="section-head">
                 <h2>Featured projects</h2>
-                <a class="tag" href="https://github.com/Shaoun18?tab=repositories">See all on GitHub →</a>
+                <a class="tag" target="_blank" href="https://github.com/Shaoun18?tab=repositories">See all on GitHub →</a>
             </div>
             <div class="grid projects">
                 <article class="card project">
@@ -517,12 +126,12 @@
             </div>
         </section>
 
-        <!-- Skills -->
+        <!-- Skills Section -->
         <section id="skills">
             <div class="section-head">
                 <h2>Skills & tools</h2>
             </div>
-            <div class="grid skills">
+            <div class="grid skill">
                 <div class="chip">HTML5</div>
                 <div class="chip">CSS3</div>
                 <div class="chip">JavaScript</div>
@@ -538,16 +147,16 @@
             </div>
         </section>
 
-        <!-- About -->
-        <section id="about" class="about">
+        <!-- About Section -->
+        <section id="about_me" class="about">
             <div class="card card-pad">
                 <h2>About me</h2>
                 <p class="lead">I’m a full‑stack developer from Bangladesh who loves building performant, accessible web
                     apps. When I’m not coding, I teach and tinker with ML.</p>
                 <ul>
-                    <li>✔ Focused on clean architecture</li>
-                    <li>✔ Communication & collaboration</li>
-                    <li>✔ Continuous learning</li>
+                    <li>Focused on clean architecture</li>
+                    <li>Communication & collaboration</li>
+                    <li>Continuous learning</li>
                 </ul>
             </div>
             <div class="card card-pad">
@@ -561,8 +170,8 @@
             </div>
         </section>
 
-        <!-- Contact -->
-        <section id="contact" class="contact">
+        <!-- Contact Section -->
+        <section id="contacts" class="contact">
             <div class="section-head">
                 <h2>Get in touch</h2>
             </div>

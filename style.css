@@ -1,0 +1,292 @@
+/* ------------------------------------
+   Global Variables (Theme Colors, Sizes, Effects)
+------------------------------------ */
+:root {
+  --bg: #0b0f17;
+  --card: #111827;
+  --muted: #6b7280;
+  --txt: #e5e7eb;
+  --brand: #60a5fa;
+  --brand-2: #a78bfa;
+  --ring: #1f2937;
+  --radius: 18px;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  --transition-speed: 0.1s;
+  --btn-hover: rgb(241, 243, 143);
+  --input-color: #0f172a;
+}
+
+/* ------------------------------------
+   Reset and Base Styles
+------------------------------------ */
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: radial-gradient(
+      1200px 600px at 80% -10%,
+      rgba(96, 165, 250, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 10% -10%,
+      rgba(167, 139, 250, 0.12),
+      transparent 55%
+    ),
+    var(--bg);
+  color: var(--txt);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ------------------------------------
+   Layout Containers
+------------------------------------ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+/* ------------------------------------
+   Header and Navigation
+------------------------------------ */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: saturate(1.2) blur(10px);
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 15, 23, 0.8),
+    rgba(11, 15, 23, 0.4)
+  );
+  border-bottom: 1px solid var(--card);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.brand .logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow);
+}
+
+.brand .logo span {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--bg);
+}
+
+.menu {
+  display: flex;
+  gap: 1.1rem;
+}
+
+.menu a {
+  padding: 10px 14px;
+  border-radius: 1rem;
+  color: #cbd5e1;
+}
+
+.menu a:hover {
+  background: var(--card);
+  color: #8995fa;
+}
+
+/* ------------------------------------
+   Buttons
+------------------------------------ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: var(--bg);
+  font-weight: 700;
+  border: 0;
+}
+
+.btn.ghost {
+  background: var(--bg);
+  color: var(--txt);
+  border: 1px solid var(--ring);
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+  color: #1045b9;
+}
+
+/* ------------------------------------
+   Sections
+------------------------------------ */
+
+section {
+  padding: 44px 0;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(73, 247, 5, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease,
+    background-color 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.1rem;
+}
+
+/* ==== Projects Section ===== */
+.project {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.project {
+  overflow: hidden;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project .body {
+  padding: 1rem;
+}
+
+.tag {
+  font-size: 0.8rem;
+  color: #93c5fd;
+  border: 1px solid #1f2937;
+  background: var(--input-color);
+  padding: 5px 8px;
+  border-radius: 999px;
+}
+
+/* ==== Skills Section ===== */
+.skill {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+#skills:hover {
+  transform: rotate(360deg);
+  background-color: var(--hover-color);
+}
+
+.chip {
+  background: var(--input-color);
+  border: 1px solid #1f2937;
+  border-radius: 999px;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.chip:hover {
+  background: #8995fa;
+  color: var(--btn-hover);
+}
+
+/* ==== About Section ===== */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+#about_me:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: var(--hover-color);
+}
+
+.card-pad {
+  padding: 1.5rem;
+}
+
+/* ==== Contact Form Section ===== */
+.contact form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+#contacts:hover {
+  transform: translateY(-15px);
+  background-color: #326bc015;
+  color: #e9c70a;
+}
+
+input,
+textarea {
+  background: var(--input-color);
+  border: 1px solid #1f2937;
+  border-radius: 0.6rem;
+  padding: 0.6rem;
+  color: var(--txt);
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #334155;
+}
+
+/* ------------------------------------
+   Hero Section
+------------------------------------ */
+
+/* ------------------------------------
+   Footer
+------------------------------------ */
+footer {
+  border-top: 1px solid var(--card);
+  margin-top: 2rem;
+}
+
+.foot {
+  display: flex;
+}
