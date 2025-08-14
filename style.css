@@ -203,7 +203,7 @@ section {
 .tag {
   font-size: 0.8rem;
   color: #93c5fd;
-  border: 1px solid #1f2937;
+  border: 1px solid var(--ring);
   background: var(--input-color);
   padding: 5px 8px;
   border-radius: 999px;
@@ -221,7 +221,7 @@ section {
 
 .chip {
   background: var(--input-color);
-  border: 1px solid #1f2937;
+  border: 1px solid var(--ring);
   border-radius: 999px;
   padding: 10px 12px;
   text-align: center;
@@ -264,7 +264,7 @@ section {
 input,
 textarea {
   background: var(--input-color);
-  border: 1px solid #1f2937;
+  border: 1px solid var(--ring);
   border-radius: 0.6rem;
   padding: 0.6rem;
   color: var(--txt);
@@ -285,8 +285,62 @@ textarea:focus {
 footer {
   border-top: 1px solid var(--card);
   margin-top: 2rem;
+  max-width: 700px;
+  margin: auto;
 }
 
 .foot {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 1rem;
+  padding: 24px 0;
+  text-align: center;
 }
+
+.footer-column {
+  margin-bottom: 1rem;
+}
+
+.send-email {
+  text-decoration: underline;
+  color: #8995fa;
+}
+
+.send-email:hover {
+  text-decoration: none;
+  color: #e9c70a;
+}
+
+.social {
+  display: flex;
+  gap: 2.0rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social a {
+  margin: 0 8px;
+  font-size: 1.5rem;
+  color: var(--brand);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social a:hover {
+  color: var(--brand-2);
+}
+
+.footer-bootom {
+  text-align: center;
+  padding: 0.8rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0.8;
+  width: 100%;
+}
+
+/* ------------------------------------
+   Responsive Design
+------------------------------------ */
