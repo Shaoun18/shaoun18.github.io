@@ -192,6 +192,22 @@ section {
 .section-head h2 {
   margin: 0;
   font-size: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-head h2::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: currentColor;
+  margin: auto;
+  transition: width var(--transition-speed) ease;
+}
+
+.section-head:hover h2::after {
+  width: 80%;
 }
 
 .grid {
@@ -217,6 +233,13 @@ section {
 .project img:hover {
   transform: scale(1.1);
   transition: var(--transition-speed);
+}
+
+.project-title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
 .project .body {
@@ -362,7 +385,7 @@ textarea:focus {
 }
 
 .hero .intro {
-  padding: 2.5rem;
+  padding: 2.1rem;
 }
 
 .eyebrow {
@@ -486,12 +509,14 @@ footer {
   justify-content: center;
   color: #94a3b8;
   font-size: 1rem;
-  padding: 24px 0;
+  padding: 24px 1rem;
   text-align: center;
+  word-break: break-word;
 }
 
 .footer-column {
   margin-bottom: 1rem;
+  max-width: 100%;
 }
 
 .send-email {
@@ -529,30 +554,34 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   opacity: 0.8;
   width: 100%;
+  font-size: 0.9rem;
+}
+
+/* ------------------------------------
+   Toast Message
+------------------------------------ */
+#toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #10b981;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  display: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* ------------------------------------
    Responsive Design
 ------------------------------------ */
 @media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
   .projects {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .skills {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .about {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 768px) {
   #menu-toggle {
     display: block;
   }
@@ -565,7 +594,42 @@ footer {
     display: none;
   }
 
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero.stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero.stats {
+    grid-template-columns: 1fr;
+  }
+
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  footer {
+    max-width: 100%;
+  }
+
+  .foot {
+    padding: 20px 1rem;
+  }
+
+  .send-email {
+    display: inline-block;
+    overflow-wrap: break-word;
   }
 }
