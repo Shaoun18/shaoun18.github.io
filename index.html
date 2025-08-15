@@ -23,12 +23,10 @@
                 <span>ProgrammerShaoun</span>
             </a>
 
-            <button id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
-                ☰
-            </button>
+            <button id="menu-toggle"><i class="fas fa-bars"></i></button>
 
             <nav id="nav_menu" class="menu">
-                <button id="close-menu" aria-label="Close Menu">✖</button>
+                <button id="close-menu"><i class="fas fa-times"></i></button>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
                 <a href="#about_me">About</a>
@@ -37,6 +35,7 @@
             <a class="btn" href="#contacts">Hire me</a>
         </div>
     </header>
+
 
     <main id="top" class="container">
         <!-- Hero Section -->
@@ -328,10 +327,12 @@
                 <a href="https://github.com/Shaoun18" aria-label="GitHub" title="GitHub" target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/shaounchandrashill/" aria-label="LinkedIn" title="LinkedIn" target="_blank">
+                <a href="https://www.linkedin.com/in/shaounchandrashill/" aria-label="LinkedIn" title="LinkedIn"
+                    target="_blank">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://www.facebook.com/shaounchandrashill/" aria-label="facebook" title="facebook" target="_blank">
+                <a href="https://www.facebook.com/shaounchandrashill/" aria-label="facebook" title="facebook"
+                    target="_blank">
                     <i class="fab fa-facebook"></i>
                 </a>
                 <a href="https://x.com/shaoun_shill" aria-label="Twitter" title="Twitter" target="_blank">
@@ -347,49 +348,6 @@
 
     <!-- Toast (success message) -->
     <div id="toast">Message sent successfully!</div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const menuToggle = document.getElementById("menu-toggle");
-            const menu = document.getElementById("nav_menu");
-            const closeMenu = document.getElementById("close-menu");
-
-            menuToggle.addEventListener("click", () => {
-                menu.classList.toggle("open");
-                const isOpen = menu.classList.contains("open");
-                menuToggle.setAttribute("aria-expanded", isOpen);
-            });
-
-            closeMenu.addEventListener("click", () => {
-                menu.classList.remove("open");
-                menuToggle.setAttribute("aria-expanded", "false");
-            });
-        });
-    </script>
-
-    <!-- Toggle Script -->
-    <!-- <script>
-        const menuToggle = document.getElementById("menu-toggle");
-        const menu = document.getElementById("nav_menu");
-        const closeMenu = document.getElementById("close-menu");
-
-        menuToggle.addEventListener("click", () => {
-            menu.classList.toggle("open");
-            const isOpen = menu.classList.contains("open");
-            menuToggle.setAttribute("aria-expanded", isOpen);
-        });
-
-
-        // menuToggle.addEventListener("click", () => {
-        //     menu.classList.add("open");
-        //     menuToggle.setAttribute("aria-expanded", "true");
-        // });
-
-        closeMenu.addEventListener("click", () => {
-            menu.classList.remove("open");
-            menuToggle.setAttribute("aria-expanded", "false");
-        });
-    </script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="script.js"></script>
