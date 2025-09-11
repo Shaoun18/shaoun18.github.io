@@ -1,5 +1,5 @@
 /* ------------------------------------
-   Global Variables (Theme Colors, Sizes, Effects)
+  * Global Variables (Theme Colors, Sizes, Effects)
 ------------------------------------ */
 :root {
   --bg: #0b0f17;
@@ -17,7 +17,7 @@
 }
 
 /* ------------------------------------
-   Reset and Base Styles
+  * Reset and Base Styles
 ------------------------------------ */
 * {
   box-sizing: border-box;
@@ -53,7 +53,7 @@ a {
 }
 
 /* ------------------------------------
-   Layout Containers
+  * Layout Containers
 ------------------------------------ */
 .container {
   max-width: 1100px;
@@ -62,7 +62,7 @@ a {
 }
 
 /* ------------------------------------
-   Header and Navigation
+  * Header and Navigation
 ------------------------------------ */
 header {
   position: sticky;
@@ -144,7 +144,7 @@ header {
 }
 
 /* ------------------------------------
-   Buttons
+  * Buttons
 ------------------------------------ */
 .btn {
   display: inline-flex;
@@ -170,7 +170,7 @@ header {
 }
 
 /* ------------------------------------
-   Sections
+  * Sections
 ------------------------------------ */
 section {
   padding: 30px 0;
@@ -369,7 +369,7 @@ textarea:focus {
 }
 
 /* ------------------------------------
-   Hero Section
+  * Hero Section
 ------------------------------------ */
 .hero {
   display: grid;
@@ -495,7 +495,7 @@ h1 {
 }
 
 /* ------------------------------------
-   Footer
+  * Footer
 ------------------------------------ */
 footer {
   border-top: 1px solid var(--card);
@@ -560,7 +560,7 @@ footer {
 }
 
 /* ------------------------------------
-   Toast Message
+  * Toast Message
 ------------------------------------ */
 #toast {
   position: fixed;
@@ -575,7 +575,7 @@ footer {
 }
 
 /* ------------------------------------
-   Responsive Design
+  * Responsive Design
 ------------------------------------ */
 @media (max-width: 900px) {
   .projects {
