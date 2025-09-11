@@ -701,6 +701,10 @@ footer {
   background: #23263a;
 }
 
+.interest-card p:hover {
+  color: #3b82f6;
+}
+
 .interest-icon {
   font-size: 2rem;
   display: block;
@@ -732,6 +736,12 @@ img.interest-icon {
   flex: 1;
 }
 
+.edu-card:hover {
+  transform: translateY(-15px);
+  background: #23263a;
+  transition: var(--transition-speed);
+}
+
 .edu-icon {
   font-size: 1.8rem;
   margin-bottom: 10px;
@@ -758,6 +768,11 @@ img.edu-icon:hover {
 .edu-content .edu-time {
   font-size: 0.9rem;
   color: #9ca3af;
+}
+
+.edu-content:hover,
+.edu-time:hover {
+  color: #3b82f6;
 }
 
 .edu-content {
