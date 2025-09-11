@@ -1,5 +1,5 @@
 /* ------------------------------------
-   Global Variables (Theme Colors, Sizes, Effects)
+  * Global Variables (Theme Colors, Sizes, Effects)
 ------------------------------------ */
 :root {
   --bg: #0b0f17;
@@ -17,7 +17,7 @@
 }
 
 /* ------------------------------------
-   Reset and Base Styles
+  * Reset and Base Styles
 ------------------------------------ */
 * {
   box-sizing: border-box;
@@ -53,7 +53,7 @@ a {
 }
 
 /* ------------------------------------
-   Layout Containers
+  * Layout Containers
 ------------------------------------ */
 .container {
   max-width: 1100px;
@@ -62,7 +62,7 @@ a {
 }
 
 /* ------------------------------------
-   Header and Navigation
+  * Header and Navigation
 ------------------------------------ */
 header {
   position: sticky;
@@ -144,7 +144,7 @@ header {
 }
 
 /* ------------------------------------
-   Buttons
+  * Buttons
 ------------------------------------ */
 .btn {
   display: inline-flex;
@@ -156,6 +156,7 @@ header {
   color: var(--bg);
   font-weight: 700;
   border: 0;
+  transition: var(--transition-speed);
 }
 
 .btn.ghost {
@@ -170,10 +171,10 @@ header {
 }
 
 /* ------------------------------------
-   Sections
+  * Sections
 ------------------------------------ */
 section {
-  padding: 30px 0;
+  padding: 20px 0;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(75, 74, 69, 0);
   /* transition: transform 0.5s ease, box-shadow 0.5s ease,
@@ -326,7 +327,7 @@ section {
 }
 
 /* ==== About Section ===== */
-.about {
+/* .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.1rem;
@@ -336,7 +337,7 @@ section {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   background-color: var(--hover-color);
-}
+} */
 
 .card-pad {
   padding: 1.5rem;
@@ -369,7 +370,7 @@ textarea:focus {
 }
 
 /* ------------------------------------
-   Hero Section
+  * Hero Section
 ------------------------------------ */
 .hero {
   display: grid;
@@ -495,7 +496,7 @@ h1 {
 }
 
 /* ------------------------------------
-   Footer
+  * Footer
 ------------------------------------ */
 footer {
   border-top: 1px solid var(--card);
@@ -560,7 +561,7 @@ footer {
 }
 
 /* ------------------------------------
-   Toast Message
+  * Toast Message
 ------------------------------------ */
 #toast {
   position: fixed;
@@ -575,7 +576,7 @@ footer {
 }
 
 /* ------------------------------------
-   Responsive Design
+  * Responsive Design
 ------------------------------------ */
 @media (max-width: 900px) {
   .projects {
@@ -657,4 +658,126 @@ footer {
     display: inline-block;
     overflow-wrap: break-word;
   }
+}
+
+/* General Section Styles */
+.section {
+  padding: 40px 20px;
+  background: #0f111a;
+  color: #f5f5f5;
+  border-radius: 12px;
+  margin-bottom: 60px;
+}
+
+.section-subtitle h2 {
+  margin-top: 20px;
+  color: #8b5cf6;
+}
+
+/* About Me */
+.about-text {
+  max-width: 950px;
+  line-height: 1.7;
+}
+
+/* Interest Cards */
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  margin-top: 20px;
+}
+
+.interest-card {
+  background: #1c1f2b;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.interest-card:hover {
+  transform: translateY(-15px);
+  background: #23263a;
+}
+
+.interest-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.interest-icon img {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  display: block;
+  background: #a34848;
+  border-radius: 10px;
+}
+
+.interest-icon:hover {
+  transition: var(--transition-speed);
+  transform: scale(1.4);
+}
+
+/* Education */
+.edu-card {
+  background: #1c1f2b;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+
+.edu-icon {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.edu-icon img {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background: #a34848;
+  border-radius: 10px;
+}
+
+.edu-content h4 a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.edu-content .edu-time {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.edu-content {
+  margin-left: 15px;
+  margin-top: -15px;
+}
+
+.edu-content ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.edu-content ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #d1d5db;
+}
+
+.edu-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 20px;
 }
