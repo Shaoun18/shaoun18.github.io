@@ -707,7 +707,7 @@ footer {
   margin-bottom: 10px;
 }
 
-.interest-icon img {
+img.interest-icon {
   width: 30px;
   height: 30px;
   margin: auto;
@@ -737,12 +737,17 @@ footer {
   margin-bottom: 10px;
 }
 
-.edu-icon img {
+img.edu-icon {
   width: 30px;
   height: 30px;
   display: block;
   background: #a34848;
   border-radius: 10px;
+}
+
+img.edu-icon:hover {
+  transition: var(--transition-speed);
+  transform: scale(1.4);
 }
 
 .edu-content h4 a {
