@@ -463,19 +463,6 @@ img.edu-icon:hover {
   transition: var(--transition-speed);
 }
 
-/* ==== About Section ===== */
-/* .about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.1rem;
-}
-
-#about_me:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: var(--hover-color);
-} */
-
 .card-pad {
   padding: 1.5rem;
 }
