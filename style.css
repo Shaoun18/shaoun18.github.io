@@ -783,3 +783,67 @@ footer {
     overflow-wrap: break-word;
   }
 }
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #93c5fd;
+}
+
+.job-card {
+  background: #1c1f2b;
+  /* #1e293b; */
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-bottom: 1.6rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: var(--transition-speed) ease;
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+
+.job-card:hover {
+  transform: translateY(-15px);
+  background: #23263a;
+  transition: var(--transition-speed);
+  color: blue;
+}
+
+.job-card h3 {
+  font-size: 1.25rem;
+  color: #f9fafb;
+}
+
+.company {
+  font-weight: 500;
+  color: #60a5fa;
+}
+
+.duration {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.tags span {
+  display: inline-block;
+  background: #334155;
+  color: #93c5fd;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  margin: 2px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+ul {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
