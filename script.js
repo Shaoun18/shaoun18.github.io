@@ -46,3 +46,25 @@ form.addEventListener("submit", function (e) {
       btn.disabled = false;
     });
 });
+
+// Dark Mode Toggle Script
+const toggle = document.getElementById("theme-toggle");
+const currentTheme = localStorage.getItem("theme") || "dark";
+document.documentElement.setAttribute("data-theme", currentTheme);
+toggle.innerHTML =
+  currentTheme === "light"
+    ? '<i class="fa-solid fa-moon"></i>'
+    : '<i class="fa-solid fa-sun"></i>';
+
+toggle.addEventListener("click", () => {
+  const theme =
+    document.documentElement.getAttribute("data-theme") === "light"
+      ? "dark"
+      : "light";
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+  toggle.innerHTML =
+    theme === "light"
+      ? '<i class="fa-solid fa-moon"></i>'
+      : '<i class="fa-solid fa-sun"></i>';
+});
