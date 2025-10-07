@@ -92,7 +92,12 @@ header {
   letter-spacing: 0.5px;
 }
 
-.brand .logo {
+.brand img {
+  width: 25px;
+  height: 25px;
+}
+
+/* .brand .logo {
   width: 25px;
   height: 25px;
   border-radius: 0.5rem;
@@ -100,13 +105,13 @@ header {
   display: grid;
   place-items: center;
   box-shadow: var(--shadow);
-}
+} 
 
 .brand .logo span {
   font-size: 1rem;
   font-weight: 900;
   color: var(--card);
-}
+} */
 
 .menu {
   display: flex;
@@ -783,7 +788,7 @@ body[data-theme="light"] {
     );
 }
 
-.section {
+/* .section {
   background: var(--muted);
 }
 
@@ -795,7 +800,7 @@ body[data-theme="light"] {
 
 .card {
   background: linear-gradient(180deg, var(--bg), var(--bg));
-}
+} */
 html,
 body,
 section,
