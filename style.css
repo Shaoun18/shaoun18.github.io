@@ -62,13 +62,13 @@ a {
 }
 
 /* ------------------------------------
-  * Header and Navigation
+  * Header and Navbar
 ------------------------------------ */
 header {
   position: sticky;
   top: 0;
   z-index: 10;
-  backdrop-filter: saturate(1.2) blur(10px);
+  backdrop-filter: saturate(1.2) blur(35px);
   background: linear-gradient(
     to bottom,
     rgba(11, 15, 23, 0.8),
@@ -92,25 +92,30 @@ header {
   letter-spacing: 0.5px;
 }
 
-.brand .logo {
-  width: 34px;
-  height: 34px;
+.brand img {
+  width: 25px;
+  height: 25px;
+}
+
+/* .brand .logo {
+  width: 25px;
+  height: 25px;
   border-radius: 0.5rem;
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
   display: grid;
   place-items: center;
   box-shadow: var(--shadow);
-}
+} 
 
 .brand .logo span {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 900;
-  color: var(--bg);
-}
+  color: var(--card);
+} */
 
 .menu {
   display: flex;
-  gap: 1.1rem;
+  gap: 1rem;
 }
 
 .menu a {
@@ -177,8 +182,8 @@ section {
   padding: 20px 0;
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(75, 74, 69, 0);
-  /* transition: transform 0.5s ease, box-shadow 0.5s ease,
-    background-color 0.5s ease; */
+  transition: transform 0.5s ease, box-shadow 0.5s ease,
+    background-color 0.5s ease;
   transition: var(--transition-speed);
   position: relative;
   overflow: hidden;
@@ -226,7 +231,9 @@ section {
   gap: 1.1rem;
 }
 
-/* ==== About Me  Section ===== */
+/* ------------------------------------
+   * About Me
+ ------------------------------------*/
 .about-text {
   max-width: 950px;
   line-height: 1.7;
@@ -237,7 +244,9 @@ section {
   color: #8b5cf6;
 }
 
-/* ===== Interest Cards ========== */
+/* ------------------------------------
+   * Interest Cards
+ ------------------------------------*/
 .interest-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -279,7 +288,9 @@ img.interest-icon {
   transform: scale(1.4);
 }
 
-/* ==== Education Section ===== */
+/* ------------------------------------
+   * Education
+ ------------------------------------*/
 .edu-card {
   background: #1c1f2b;
   border-radius: 12px;
@@ -363,7 +374,9 @@ img.edu-icon:hover {
   border-radius: 20px;
 }
 
-/* ==== Work Experience Section ===== */
+/* ------------------------------------
+   * Work Experience
+ ------------------------------------*/
 .job-card {
   background: #1c1f2b;
   /* #1e293b; */
@@ -395,7 +408,9 @@ img.edu-icon:hover {
   margin-bottom: 20px;
 }
 
-/* ==== Projects Section ===== */
+/* ------------------------------------
+   * Projects
+ ------------------------------------*/
 .projects {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -446,7 +461,9 @@ img.edu-icon:hover {
   transition: var(--transition-speed);
 }
 
-/* ==== Skills Section ===== */
+/* ------------------------------------
+   * Skills
+ ------------------------------------*/
 #skills {
   margin: auto;
   padding: 2rem;
@@ -507,7 +524,9 @@ img.edu-icon:hover {
   padding: 1.5rem;
 }
 
-/* ==== Contact Form Section ===== */
+/* ------------------------------------
+   * Contact Form
+ ------------------------------------*/
 .contact form {
   display: grid;
   gap: 0.8rem;
@@ -577,6 +596,7 @@ textarea:focus {
 h1 {
   font-size: clamp(28px, 5vw, 44px);
   margin: 14px 0 10px;
+  color: white;
 }
 
 .lead {
@@ -718,7 +738,7 @@ footer {
 .footer-bootom {
   text-align: center;
   padding: 0.8rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid var(--card);
   opacity: 0.8;
   width: 100%;
   font-size: 0.9rem;
@@ -740,94 +760,53 @@ footer {
 }
 
 /* ------------------------------------
-  * Responsive Design
+  * Light Theme Variables
 ------------------------------------ */
-@media (max-width: 900px) {
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
+:root[data-theme="light"] {
+  --bg: #9db0c4;
+  --card: #ffffff;
+  --muted: #4b5563;
+  --txt: #111827;
+  --brand: #2563eb;
+  --brand-2: #7c3aed;
+  --ring: #d1d5db;
+  --input-color: #f3f4f6;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --btn-hover: #e0e7ff;
 }
 
-@media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
-  }
-
-  #close-menu {
-    display: block;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: -250px;
-    background: var(--card);
-    padding: 1rem;
-    border-radius: 0 0 0 12px;
-    box-shadow: var(--shadow);
-    transition: right var(--transition-speed) ease-in-out;
-    z-index: 999;
-  }
-
-  .menu.open {
-    display: flex;
-    right: 0;
-  }
-
-  #close-menu {
-    display: block;
-    align-self: flex-end;
-    margin: 0.5rem;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .hero.stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .skills {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .about {
-    grid-template-columns: 1fr;
-  }
+body[data-theme="light"] {
+  background-image: radial-gradient(
+      1200px 600px at 80% -10%,
+      rgba(96, 165, 250, 0.1),
+      transparent 10%
+    ),
+    radial-gradient(
+      900px 500px at 10% -10%,
+      rgba(167, 139, 250, 0.1),
+      transparent 5%
+    );
 }
 
-@media (max-width: 740px) {
-  .edu-badge {
-    display: none;
-  }
+/* .section {
+  background: var(--muted);
 }
 
-@media (max-width: 600px) {
-  .hero.stats {
-    grid-template-columns: 1fr;
-  }
+.interest-card,
+.edu-card,
+.job-card {
+  background: var(--muted);
+}
 
-  .section-head h2 {
-    font-size: 1.2rem;
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
-  }
-
-  footer {
-    max-width: 100%;
-  }
-
-  .foot {
-    padding: 20px 1rem;
-  }
-
-  .send-email {
-    display: inline-block;
-    overflow-wrap: break-word;
-  }
+.card {
+  background: linear-gradient(180deg, var(--bg), var(--bg));
+} */
+html,
+body,
+section,
+.card,
+header,
+footer {
+  transition: background-color 0.4s ease, color 0.4s ease,
+    border-color 0.4s ease;
 }

@@ -1,7 +1,9 @@
 // Year Auto detect
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Toggle Script
+/* -------------------------
+  * Toggle Menu Script
+------------------------- */
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("nav_menu");
 const closeMenu = document.getElementById("close-menu");
@@ -16,7 +18,9 @@ closeMenu.addEventListener("click", () => {
   menuToggle.setAttribute("aria-expanded", "false");
 });
 
-// Email Send script
+/* -------------------------
+  * Email Send script
+------------------------- */
 const EMAILJS_PUBLIC_KEY = "P0SBhvT-Hf90cDARx";
 const EMAILJS_SERVICE_ID = "service_kldllhc";
 const EMAILJS_TEMPLATE_ID = "template_1pwzrtt";
@@ -46,3 +50,45 @@ form.addEventListener("submit", function (e) {
       btn.disabled = false;
     });
 });
+
+/* -------------------------
+  * Dark Mode Toggle Script
+------------------------- */
+const toggle = document.getElementById("theme-toggle");
+const currentTheme = localStorage.getItem("theme") || "dark";
+document.documentElement.setAttribute("data-theme", currentTheme);
+toggle.innerHTML =
+  currentTheme === "light"
+    ? '<i class="fa-solid fa-moon"></i>'
+    : '<i class="fa-solid fa-sun"></i>';
+
+toggle.addEventListener("click", () => {
+  const theme =
+    document.documentElement.getAttribute("data-theme") === "light"
+      ? "dark"
+      : "light";
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+  toggle.innerHTML =
+    theme === "light"
+      ? '<i class="fa-solid fa-moon"></i>'
+      : '<i class="fa-solid fa-sun"></i>';
+});
+
+/* -------------------------
+  * CV Download Script
+------------------------- */
+const cvButton = document.getElementById("cv");
+
+if (cvButton) {
+  cvButton.addEventListener("click", () => {
+    const link = document.createElement("a");
+    link.href = "cv/Shaoun_Chandra_Shill.pdf";
+    link.download = "Shaoun_Chandra_Shill_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+} else {
+  console.error("CV not found");
+}
