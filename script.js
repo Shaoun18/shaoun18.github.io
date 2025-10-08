@@ -78,17 +78,19 @@ toggle.addEventListener("click", () => {
 /* -------------------------
   * CV Download Script
 ------------------------- */
-const cvButton = document.getElementById("cv");
+try {
+  const cvButton = document.getElementById("cv");
 
-if (cvButton) {
-  cvButton.addEventListener("click", () => {
-    const link = document.createElement("a");
-    link.href = "cv/Shaoun_Chandra_Shill.pdf";
-    link.download = "Shaoun_Chandra_Shill_CV.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  });
-} else {
-  console.error("CV not found");
+  if (cvButton) {
+    cvButton.addEventListener("click", () => {
+      const link = document.createElement("a");
+      link.href = "cv/Shaoun_Chandra_Shill.pdf";
+      link.download = "Shaoun_Chandra_Shill_CV.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  }
+} catch (error) {
+  console.error("❌ Error in CV download script:", error.message);
 }
