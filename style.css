@@ -44,7 +44,7 @@ body {
       transparent 5%
     );
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 a {
@@ -733,6 +733,7 @@ footer {
 
 .social a:hover {
   color: var(--brand-2);
+  transform: scale(1.5);
 }
 
 .footer-bootom {
