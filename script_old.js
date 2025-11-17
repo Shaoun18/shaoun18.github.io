@@ -2,7 +2,7 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
 /* -------------------------
-  * Toggle Menu Script
+  * Responsive Toggle Menu Script
 ------------------------- */
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("nav_menu");
@@ -21,9 +21,9 @@ closeMenu.addEventListener("click", () => {
 /* -------------------------
   * Email Send script
 ------------------------- */
-const EMAILJS_PUBLIC_KEY = "P0SBhvT-Hf90cDARx";
-const EMAILJS_SERVICE_ID = "service_kldllhc";
-const EMAILJS_TEMPLATE_ID = "template_1pwzrtt";
+const EMAILJS_PUBLIC_KEY = "_zaPKtVyBE8T5Q5l9";
+const EMAILJS_SERVICE_ID = "service_g5c0tlz";
+const EMAILJS_TEMPLATE_ID = "template_i9cz6sb";
 
 emailjs.init(EMAILJS_PUBLIC_KEY);
 
