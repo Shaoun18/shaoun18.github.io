@@ -1,1 +1,2 @@
+<!-- google ads connections.txt -->
 google.com, pub-8240728776964173, DIRECT, f08c47fec0942fa0
