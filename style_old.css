@@ -14,6 +14,7 @@
   --transition-speed: 0.8s;
   --btn-hover: rgb(241, 243, 143);
   --input-color: #0f172a;
+  --link-hover: #e9c70a;
 }
 
 /* ------------------------------------
@@ -456,7 +457,7 @@ img.edu-icon:hover {
 }
 
 .tag:hover {
-  background: #e9c70a;
+  background: var(--link-hover);
   color: blue;
   transition: var(--transition-speed);
 }
@@ -535,7 +536,7 @@ img.edu-icon:hover {
 #contacts:hover {
   transform: translateY(-15px);
   background-color: #326bc015;
-  color: #e9c70a;
+  color: var(--link-hover);
 }
 
 input,
@@ -709,11 +710,13 @@ footer {
 .send-email {
   text-decoration: underline;
   color: #8995fa;
+  display: inline-block;
+  transition: transform var(--transition-speed), color var(--transition-speed);
 }
 
 .send-email:hover {
-  text-decoration: none;
-  color: #e9c70a;
+  color: var(--link-hover);
+  transform: scale(1.03);
 }
 
 .social {
@@ -736,13 +739,25 @@ footer {
   transform: scale(1.5);
 }
 
-.footer-bootom {
+.footer-bottom {
   text-align: center;
   padding: 0.8rem 0;
   border-top: 1px solid var(--card);
   opacity: 0.8;
   width: 100%;
-  font-size: 0.9rem;
+  font-size: 1rem;
+}
+
+.footer-bottom a {
+  text-decoration: underline;
+  color: #8995fa;
+  display: inline-block;
+  transition: transform var(--transition-speed), color var(--transition-speed);
+}
+
+.footer-bottom a:hover {
+  color: var(--link-hover);
+  transform: scale(1.03);
 }
 
 /* ------------------------------------
