@@ -1,0 +1,19 @@
+:root, :root[data-theme='dark'] {
+  --bg: #0a0f1a; --surface: #111a2b; --surface-2: #16223a; --line: #1f2c45;
+  --text: #e6eaf2; --muted: #98a3b8; --accent: #ffb84d; --accent-ink: #1a1205;
+  --link: #ffc978; --chip: #1a2742; --chip-text: #b9c8ea; --glow: rgba(255, 184, 77, 0.16);
+  --tile: #e9eef8; --shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.7);
+  color-scheme: dark;
+}
+:root[data-theme='light'] {
+  --bg: #f3f6fa; --surface: #ffffff; --surface-2: #eaf0f8; --line: #d8e0ec;
+  --text: #0e1726; --muted: #52607a; --accent: #ffb84d; --accent-ink: #1a1205;
+  --link: #9a5b00; --chip: #e6edf8; --chip-text: #2b3d63; --glow: rgba(255, 160, 40, 0.18);
+  --tile: #eef2f9; --shadow: 0 18px 36px -24px rgba(20, 40, 80, 0.35);
+  color-scheme: light;
+}
+:root {
+  --display: 'Bricolage Grotesque Variable', 'Segoe UI', system-ui, sans-serif;
+  --body: 'Instrument Sans Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
