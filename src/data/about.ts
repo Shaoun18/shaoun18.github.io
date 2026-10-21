@@ -1,0 +1,4 @@
+export const about: string[] = [
+ "I am a passionate Software Engineer and Machine Learning Enthusiast with experience building modern, responsive web applications and exploring the integration of Artificial Intelligence into real-world systems. My background includes developing dynamic frontend interfaces, scalable backend solutions, and experimenting with intelligent features powered by data-driven approaches. Alongside practical development, I actively contribute to open-source projects and continuously expand my expertise across both web technologies and AI.",
+ "Bringing together creativity in design, strong problem-solving skills, and hands-on experience in end-to-end system development, I aim to build impactful digital solutions that are efficient, user-friendly, and future-ready."
+];
