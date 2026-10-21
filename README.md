@@ -1,4 +1,4 @@
-# Shaoun Chandra Shill – Portfolio (React + TypeScript + Vite)
+# Portfolio (React + TypeScript + Vite)
 
 ```bash
 npm install
