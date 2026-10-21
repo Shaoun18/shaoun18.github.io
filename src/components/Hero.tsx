@@ -2,9 +2,10 @@ import { LuDownload, LuMail, LuMapPin } from 'react-icons/lu';
 import { useCountUp } from '../hooks/hooks';
 
 const STATS = [
-  { n: 10, suffix: '+', label: 'Projects' },
-  { n: 1, suffix: '+ yr', label: 'Experience' },
-  { n: 15, suffix: '+', label: 'Certificates' },
+  { n: 15, suffix: "+", label: "Projects" },
+  { n: 2, suffix: "+ yr", label: "Experience" },
+  { n: 20, suffix: "+", label: "Certificates" },
+  { n: 2, suffix: "+", label: "Wordpress Plugins" },
 ];
 
 function Stat({ n, suffix, label }: (typeof STATS)[number]) {

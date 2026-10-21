@@ -1,33 +1,32 @@
 import { lazy, Suspense, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Experience from './components/Experience';
+import About from './components/About';
+import Education from './components/Education';
 import Footer from './components/Footer';
 import { useScrollState } from './hooks/hooks';
 
-// Below-the-fold sections are split into their own chunks and prefetched when the browser is idle.
+// Sections after Education are split into their own chunks and prefetched when the browser is idle.
 const loaders = {
+  experience: () => import('./components/Experience'),
   projects: () => import('./components/Projects'),
   research: () => import('./components/Research'),
   skills: () => import('./components/Skills'),
-  about: () => import('./components/About'),
-  education: () => import('./components/Education'),
   contact: () => import('./components/Contact'),
 };
+const Experience = lazy(loaders.experience);
 const Projects = lazy(loaders.projects);
 const Research = lazy(loaders.research);
 const Skills = lazy(loaders.skills);
-const About = lazy(loaders.about);
-const Education = lazy(loaders.education);
 const Contact = lazy(loaders.contact);
 
 const NAV = [
-  { id: 'experience', label: 'Experience' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'research', label: 'Research' },
-  { id: 'skills', label: 'Skills' },
   { id: 'about', label: 'About' },
   { id: 'education', label: 'Education' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'research', label: 'Research' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'skills', label: 'Skills' },
 ];
 const IDS = NAV.map((n) => n.id).concat('contact');
 
@@ -48,12 +47,12 @@ export default function App() {
       <Header nav={NAV} active={active} />
       <main id="main">
         <Hero />
-        <Experience />
-        <Suspense fallback={<Holder id="projects" />}><Projects /></Suspense>
+        <About />
+        <Education />
         <Suspense fallback={<Holder id="research" />}><Research /></Suspense>
+        <Suspense fallback={<Holder id="experience" />}><Experience /></Suspense>
+        <Suspense fallback={<Holder id="projects" />}><Projects /></Suspense>
         <Suspense fallback={<Holder id="skills" />}><Skills /></Suspense>
-        <Suspense fallback={<Holder id="about" />}><About /></Suspense>
-        <Suspense fallback={<Holder id="education" />}><Education /></Suspense>
         <Suspense fallback={<Holder id="contact" />}><Contact /></Suspense>
       </main>
       <Footer />

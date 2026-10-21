@@ -40,10 +40,10 @@ export const experience: Experience[] = [
   ]
  },
  {
-  "role": "Junior WordPress Developer",
+  "role": "Junior WordPress Plugin Developer",
   "company": "bitBirds Solutions",
   "url": "https://bitbirds.com/",
-  "period": "June 2025 – October 2025",
+  "period": "November 2024 – October 2025",
   "location": "Dhaka, Bangladesh",
   "tags": [
    "PHP",
@@ -64,26 +64,26 @@ export const experience: Experience[] = [
    "Collaborated with cross-functional teams to deliver scalable web applications."
   ]
  },
- {
-  "role": "Software Engineer",
-  "company": "ZettaByte Technology Incorporation",
-  "url": "https://zettabyteincorp.com/",
-  "period": "November 2024 – April 2025",
-  "location": "Dhaka, Bangladesh",
-  "tags": [
-   "PHP",
-   "WordPress",
-   "React",
-   "TailwindCSS",
-   "REST API",
-   "JavaScript",
-   "Notion"
-  ],
-  "points": [
-   "Designed and implemented scalable web applications integrating React with WordPress.",
-   "Configured and maintained RESTful APIs to enhance system interoperability.",
-   "Implemented responsive UIs with TailwindCSS and JavaScript for seamless user experience.",
-   "Collaborated on automated testing strategies to improve software quality and maintainability."
-  ]
- }
+//  {
+//   "role": "Software Engineer",
+//   "company": "ZettaByte Technology Incorporation",
+//   "url": "https://zettabyteincorp.com/",
+//   "period": "November 2024 – April 2025",
+//   "location": "Dhaka, Bangladesh",
+//   "tags": [
+//    "PHP",
+//    "WordPress",
+//    "React",
+//    "TailwindCSS",
+//    "REST API",
+//    "JavaScript",
+//    "Notion"
+//   ],
+//   "points": [
+//    "Designed and implemented scalable web applications integrating React with WordPress.",
+//    "Configured and maintained RESTful APIs to enhance system interoperability.",
+//    "Implemented responsive UIs with TailwindCSS and JavaScript for seamless user experience.",
+//    "Collaborated on automated testing strategies to improve software quality and maintainability."
+//   ]
+//  }
 ];
